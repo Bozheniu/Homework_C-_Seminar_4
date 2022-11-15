@@ -4,10 +4,14 @@
 3, 5 -> 243 (3⁵)
 2, 4-> 16 */
 
-double RaisingAtoThePowerOfB(double A, double B)
+int RaisingAtoThePowerOfB(int A, int B)
 {
-    double i = Math.Pow(A, B);
-    return i;
+    int result = 1;
+    for (int i = 1; i <= B; i++)
+    {
+        result = result * A;
+    }
+    return result;
 }
 
 Console.WriteLine(RaisingAtoThePowerOfB(3, 5));
